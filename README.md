@@ -31,8 +31,10 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/book_management
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.datasource.drive-class-name=org.postgresql.Driver
-
 spring.jpa.hibernate.ddl-auto=update
+
+//port
+server.port=8080
 
 ```
 
@@ -44,6 +46,9 @@ sesuaikan setup application.properties:
 spring.datasource.url=${DB_URL}
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
+
+#port
+server.port=${SERVER_PORT}
 
 ```
 

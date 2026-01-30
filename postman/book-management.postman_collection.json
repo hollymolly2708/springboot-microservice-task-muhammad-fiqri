@@ -3,7 +3,8 @@
     "_postman_id": "5cfa48e8-652a-475b-8ff8-bb99dc03eef6",
     "name": "book-management",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "17876581"
+    "_exporter_id": "17876581",
+    "_collection_link": "https://go.postman.co/collection/17876581-5cfa48e8-652a-475b-8ff8-bb99dc03eef6?source=collection_link"
   },
   "item": [
     {
@@ -281,6 +282,11 @@
     {
       "key": "authorUpdated",
       "value": "Robert C. Martin New"
+    },
+    {
+      "key": "baseUrl",
+      "value": "localhost:8080",
+      "type": "default"
     }
   ]
 }
