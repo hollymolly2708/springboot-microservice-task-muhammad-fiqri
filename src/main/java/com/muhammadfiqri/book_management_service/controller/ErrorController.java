@@ -25,21 +25,4 @@ public class ErrorController {
         return ResponseEntity.status(exception.getStatusCode()).body(WebResponse.<String>builder().isSuccess(false).errors(exception.getMessage()).build());
     }
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<WebResponse<Object>> handleValidation(MethodArgumentNotValidException ex) {
-
-        Map<String, String> errors = new HashMap<>();
-
-        ex.getBindingResult()
-                .getFieldErrors()
-                .forEach(error ->
-                        errors.put(error.getField(), error.getDefaultMessage())
-                );
-
-        return ResponseEntity.badRequest()
-                .body(WebResponse.builder()
-                        .isSuccess(false)
-                        .errors(errors)
-                        .build());
-    }
 }

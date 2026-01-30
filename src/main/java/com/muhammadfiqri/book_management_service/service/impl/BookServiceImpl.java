@@ -8,6 +8,7 @@ import com.muhammadfiqri.book_management_service.model.request.UpdateBookRequest
 import com.muhammadfiqri.book_management_service.model.response.BookResponse;
 import com.muhammadfiqri.book_management_service.repository.BookRepository;
 import com.muhammadfiqri.book_management_service.service.BookService;
+import com.muhammadfiqri.book_management_service.service.ValidationService;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,14 +24,19 @@ import java.util.Optional;
 public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
 
+    private final ValidationService validationService;
+
     @Autowired
-    public BookServiceImpl(BookRepository bookRepository) {
+    public BookServiceImpl(BookRepository bookRepository, ValidationService validationService) {
         this.bookRepository = bookRepository;
+        this.validationService = validationService;
     }
 
     @Override
     @Transactional
     public void addBook(AddBookRequest request) {
+
+        validationService.validate(request);
         Book book = new Book();
         book.setTitle(request.getTitle());
         book.setIsbn(request.getIsbn());
@@ -63,6 +69,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional
     public BookResponse updateBook(Long id, UpdateBookRequest request) {
+        validationService.validate(request);
         Book book = bookRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found"));
         book.setTitle(request.getTitle());
         book.setIsbn(request.getIsbn());
@@ -76,6 +83,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional
     public BookResponse patchBook(Long id, PatchBookRequest request) {
+
         Book book = bookRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found"));
         if (request.getTitle() != null) {
             book.setTitle(request.getTitle());
