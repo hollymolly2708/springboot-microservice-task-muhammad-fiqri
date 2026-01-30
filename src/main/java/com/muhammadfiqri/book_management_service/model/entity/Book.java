@@ -2,11 +2,13 @@ package com.muhammadfiqri.book_management_service.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -14,24 +16,25 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "book")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    public Long id;
+    private Long id;
 
     @Column(nullable = false, name = "title")
-    public String title;
+    private String title;
 
     @Column(nullable = false, name = "author")
-    public String author;
+    private String author;
 
     @Column(name = "isbn")
-    public String isbn;
+    private String isbn;
 
     @Column(name = "published_date")
-    public Date publishedDate;
+    private LocalDate publishedDate;
 
     @Column(name = "created_at", updatable = false)
     @CreationTimestamp
