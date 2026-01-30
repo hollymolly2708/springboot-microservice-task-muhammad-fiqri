@@ -6,7 +6,6 @@ import com.muhammadfiqri.book_management_service.model.request.UpdateBookRequest
 import com.muhammadfiqri.book_management_service.model.response.BookResponse;
 import com.muhammadfiqri.book_management_service.model.response.WebResponse;
 import com.muhammadfiqri.book_management_service.service.BookService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

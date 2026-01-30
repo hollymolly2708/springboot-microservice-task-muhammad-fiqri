@@ -1,6 +1,5 @@
 package com.muhammadfiqri.book_management_service.service;
 
-import com.muhammadfiqri.book_management_service.model.entity.Book;
 import com.muhammadfiqri.book_management_service.model.request.AddBookRequest;
 import com.muhammadfiqri.book_management_service.model.request.PatchBookRequest;
 import com.muhammadfiqri.book_management_service.model.request.UpdateBookRequest;

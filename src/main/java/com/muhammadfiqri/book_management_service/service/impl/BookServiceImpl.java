@@ -9,7 +9,6 @@ import com.muhammadfiqri.book_management_service.model.response.BookResponse;
 import com.muhammadfiqri.book_management_service.repository.BookRepository;
 import com.muhammadfiqri.book_management_service.service.BookService;
 import com.muhammadfiqri.book_management_service.service.ValidationService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -59,12 +57,6 @@ public class BookServiceImpl implements BookService {
 
     }
 
-    @Override
-    @Transactional
-    public void deleteBookById(Long id) {
-        Book book = bookRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found"));
-        bookRepository.delete(book);
-    }
 
     @Override
     @Transactional
@@ -97,8 +89,18 @@ public class BookServiceImpl implements BookService {
         if (request.getIsbn() != null) {
             book.setIsbn(request.getIsbn());
         }
+
+        book.setUpdatedAt(LocalDateTime.now());
         bookRepository.save(book);
 
         return BookMapper.bookToBookResponse(book);
     }
+
+    @Override
+    @Transactional
+    public void deleteBookById(Long id) {
+        Book book = bookRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found"));
+        bookRepository.delete(book);
+    }
+
 }
