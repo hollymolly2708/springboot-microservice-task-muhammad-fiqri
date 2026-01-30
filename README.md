@@ -76,11 +76,7 @@ Steps:
 3. Select the JSON file
 4. Run the requests
 
-Or access the public Postman collection here:
-
-👉 [View the Postman Collection](https://www.postman.co/workspace/My-Workspace~fd01e8a2-14fa-4bbd-8a45-fe491f1a4029/collection/17876581-5cfa48e8-652a-475b-8ff8-bb99dc03eef6?action=share&creator=17876581)
-
-Or you can download collection from this google drive if the link above cant be used.
+Or you can download collection from this google drive.
 
 👉 [View the Postman Collection from GDRIVE](https://drive.google.com/drive/folders/1JHynoQom18lBFQcUC145e3SQX6814ffR?usp=sharing)
 
