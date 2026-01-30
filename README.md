@@ -8,7 +8,7 @@ Project ini menggunakan **PostgreSQL**, **Spring Data JPA**, **Lombok**, dan **v
 ## 🚀 Tech Stack
 
 - Java 17
-- Spring Boot
+- Spring Boot 4.0.2
 - Spring Web MVC
 - Spring Data JPA
 - PostgreSQL
