@@ -13,9 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 public class PatchBookRequest {
-    @NotBlank
     private String title;
-    @NotBlank
     private String author;
     private String isbn;
     private LocalDate publishedDate;

@@ -54,6 +54,7 @@ public class BookController {
 
     @DeleteMapping(path = "/api/books/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public WebResponse<String> deleteBookById(@PathVariable("id") Long id) {
+        bookService.deleteBookById(id);
         return WebResponse.<String>builder().data("Book has successfully deleted").isSuccess(true).build();
     }
 }
