@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "5cfa48e8-652a-475b-8ff8-bb99dc03eef6",
+    "_postman_id": "0871b77f-7da2-4330-ac3c-5f11feeabc34",
     "name": "book-management",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "17876581",
-    "_collection_link": "https://go.postman.co/collection/17876581-5cfa48e8-652a-475b-8ff8-bb99dc03eef6?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/17876581-0871b77f-7da2-4330-ac3c-5f11feeabc34?source=collection_link"
   },
   "item": [
     {
@@ -13,12 +13,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/books",
+          "raw": "http://{{baseUrl}}/api/books",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books"
@@ -62,12 +61,11 @@
           ]
         },
         "url": {
-          "raw": "http://localhost:8080/api/books",
+          "raw": "http://{{baseUrl}}/api/books",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books"
@@ -89,12 +87,11 @@
           "urlencoded": []
         },
         "url": {
-          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "raw": "http://{{baseUrl}}/api/books/{{bookId}}",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books",
@@ -114,12 +111,11 @@
           "urlencoded": []
         },
         "url": {
-          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "raw": "http://{{baseUrl}}/api/books/{{bookId}}",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books",
@@ -164,12 +160,11 @@
           ]
         },
         "url": {
-          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "raw": "http://{{baseUrl}}/api/books/{{bookId}}",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books",
@@ -214,12 +209,11 @@
           ]
         },
         "url": {
-          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "raw": "http://{{baseUrl}}/api/books/{{bookId}}",
           "protocol": "http",
           "host": [
-            "localhost"
+            "{{baseUrl}}"
           ],
-          "port": "8080",
           "path": [
             "api",
             "books",
