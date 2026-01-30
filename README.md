@@ -56,7 +56,7 @@ server.port=${SERVER_PORT}
 
 **1. Clone Repository**
 ```bash
-git clone https://github.com/username/book-management-service.git
+git clone https://github.com/hollymolly2708/springboot-microservice-task-muhammad-fiqri.git
 cd book-management-service
 ```
 **2. Build Project**
