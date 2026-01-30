@@ -9,6 +9,7 @@ public class BookMapper {
     private BookMapper() {
 
     }
+
     public static BookResponse bookToBookResponse(Book book) {
         return BookResponse.builder()
                 .id(book.getId())
@@ -24,6 +25,7 @@ public class BookMapper {
             BookResponse bookResponse = new BookResponse();
             bookResponse.setId(book.getId());
             bookResponse.setAuthor(book.getAuthor());
+            bookResponse.setTitle(book.getTitle());
             bookResponse.setIsbn(book.getIsbn());
             bookResponse.setPublishedDate(book.getPublishedDate());
             return bookResponse;
