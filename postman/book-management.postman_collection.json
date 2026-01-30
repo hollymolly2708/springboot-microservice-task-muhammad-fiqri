@@ -1,0 +1,286 @@
+{
+  "info": {
+    "_postman_id": "5cfa48e8-652a-475b-8ff8-bb99dc03eef6",
+    "name": "book-management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17876581"
+  },
+  "item": [
+    {
+      "name": "get-all-books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add-book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "{{title}}",
+              "type": "text",
+              "uuid": "e4ec8b27-b5d3-4e45-9386-c796d0f6291a"
+            },
+            {
+              "key": "author",
+              "value": "{{author}}",
+              "type": "text",
+              "uuid": "15804070-258d-458e-bdd7-09c12ee18c84"
+            },
+            {
+              "key": "isbn",
+              "value": "{{isbn}}",
+              "type": "text",
+              "uuid": "133bac17-8f57-4040-a9be-f011f0b13a3a"
+            },
+            {
+              "key": "publishedDate",
+              "value": "{{publishedDate}}",
+              "type": "text",
+              "uuid": "04466d7b-54eb-46e5-86cb-c95bbdd2b689"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-book-by-id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-book-by-id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-book-by-id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "{{titleUpdated}}",
+              "type": "text",
+              "uuid": "be52d00f-6d22-4ada-bc4b-12941412e946"
+            },
+            {
+              "key": "author",
+              "value": "{{authorUpdated}}",
+              "type": "text",
+              "uuid": "91a742ab-fd72-4181-a26b-82b9257527dc"
+            },
+            {
+              "key": "isbn",
+              "value": "{{isbn}}",
+              "type": "text",
+              "uuid": "dafe6ff9-dab9-49d7-b448-04c5b9b58222"
+            },
+            {
+              "key": "publishedDate",
+              "value": "{{publishedDate}}",
+              "type": "text",
+              "uuid": "e52f2708-505d-404e-a55c-a251f1e96d75"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "patch-book-by-id",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "{{titleUpdated}}",
+              "type": "text",
+              "uuid": "a771d9e7-b7f8-4bc2-b227-ca0f04eba786"
+            },
+            {
+              "key": "author",
+              "value": "{{authorUpdated}}",
+              "type": "text",
+              "uuid": "1d88e516-bade-45c8-923d-f5db4a93a7d0"
+            },
+            {
+              "key": "isbn",
+              "value": "{{isbn}}",
+              "type": "text",
+              "uuid": "5dddcb78-ec8f-4234-8877-4231254a6d74"
+            },
+            {
+              "key": "publishedDate",
+              "value": "{{publishedDate}}",
+              "type": "text",
+              "uuid": "7c61ac5e-4a55-4800-b8f6-e1b371ee72f4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/{{bookId}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "bookId",
+      "value": ""
+    },
+    {
+      "key": "title",
+      "value": "Clean Code"
+    },
+    {
+      "key": "author",
+      "value": "Robert C. Martin"
+    },
+    {
+      "key": "isbn",
+      "value": "92382323000"
+    },
+    {
+      "key": "publishedDate",
+      "value": "2008-08-01"
+    },
+    {
+      "key": "titleUpdated",
+      "value": "Clean Code (Revised Edition)"
+    },
+    {
+      "key": "authorUpdated",
+      "value": "Robert C. Martin New"
+    }
+  ]
+}
